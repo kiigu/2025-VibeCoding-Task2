@@ -93,7 +93,7 @@
             text-align: left;
         }
         .hero-text p {
-            margin-bottom: 12px;
+            margin-bottom: 16px;
             color: #d7e0ea;
         }
         .hero-img-wrapper {
@@ -123,9 +123,20 @@
 
         /* ===== RWD ===== */
         @media (min-width: 768px) {
+            .hero-container {
+                flex-direction: row;       /* 左文右圖 */
+                justify-content: space-between;
+                align-items: center;
+                text-align: left;          /* 文字靠左 */
+            }
             .section-hero h1 {
                 font-size: 40px;
             }
+            .hero-image-wrapper {
+                flex: 1;
+                max-width: 50%;
+            }
+
         }
         @media (min-width: 1440px) {}
     </style>
