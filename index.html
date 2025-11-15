@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="這是一個專為前端工程師打造的個人品牌網站，完整呈現我的背景經歷、技術專長、作品集展示與聯絡方式，提供訪客快速了解我的專業能力與合作潛力。" />
-    <title>Your Name · Frontend Dev</title>
+    <meta name="description" content="這是一個專為Vibe coding學習者打造的個人品牌網站，完整呈現我的背景經歷、技術專長、作品集展示與聯絡方式，提供訪客快速了解我的專業能力與合作潛力。" />
+    <title>米豆綠 · 非工程師</title>
 
     <!-- 全站 CSS（單一 style 標籤，無外掛、無 JS） -->
     <style>
@@ -78,14 +78,32 @@
 
         /* ===== HERO 區 ===== */
         .section-hero {
-            text-align: center;
             padding-top: 96px;
             padding-bottom: 96px;
         }
-        .section-hero h1 {
+        .hero-container {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+        .hero-text h1 {
             font-size: 32px;
             margin-bottom: 16px;
             color: #ffffff;
+            text-align: left;
+        }
+        .hero-text p {
+            margin-bottom: 12px;
+            color: #d7e0ea;
+        }
+        .hero-img-wrapper {
+            width: 100%;
+        }
+        .hero-img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
         }
 
         /* ===== 區塊樣式（可被後續內容覆蓋） ===== */
@@ -133,8 +151,16 @@
     <main>
         <!-- ===== Hero 區 ===== -->
         <section id="hero" class="section section-hero">
-            <h1>這裡是 HERO 區的占位標題</h1>
-            <p>此處將會呈現你的個人標語、專業方向以及主要視覺內容。</p>
+            <div class="hero-container">
+              <div class="hero-text">
+                <h1>以熱情與專注打造屬於你的數位體驗</h1>
+                <p class="hero-desc-1">這裡呈現的是一種乾淨、專業、沉穩的網站風格，專注於清晰敘事與優雅的視覺節奏。</p>
+                <p class="hero-desc-2">我做事講求細節、效率與一致性，以穩定的節奏打造可靠好維護的前端介面。</p>
+              </div>
+              <div class="hero-img-wrapper">
+                <img class="hero-img" src="https://source.unsplash.com/800x600/?coding,passion" alt="充滿熱情寫程式的示意照片" />
+              </div>
+            </div>
         </section>
 
         <!-- ===== About 區 ===== -->
